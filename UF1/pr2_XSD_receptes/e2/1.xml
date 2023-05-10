@@ -7,8 +7,8 @@
         Pr2 XSD exercici 2
 -->
 <receptes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="e2_receptes.xsd">
-    <recepta dificultat="8">
-        <nom>Patates amb llet</nom>
+    <recepta dificultat="5">
+        <nom>Papates amb llet</nom>
         <ingredients>
             <ingredient>
                 <quantitat>
