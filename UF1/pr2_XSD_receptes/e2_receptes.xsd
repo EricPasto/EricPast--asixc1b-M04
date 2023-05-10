@@ -58,7 +58,7 @@
                             </xs:element>
                         </xs:sequence>
                                                
-                        <xs:attribute name="dificultat" type="xs:nonNegativeInteger" use="required" />
+                        <xs:attribute name="dificultat" type="xs:nonNegativeInteger" use="required"/>
                         <xs:attribute name="categoria" type="xs:string" use="optional"/>
                     </xs:complexType>
                </xs:element>
