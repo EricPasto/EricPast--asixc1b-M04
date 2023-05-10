@@ -1,0 +1,17 @@
+<receptes>
+   <recepta dificultat="5">
+       <nom>Patates amb llet</nom>
+       <passos>
+           <pas>Fregir patates</pas>
+           <pas>Posar-hi la llet</pas>
+           <pas>deixar refredar</pas>
+       </passos>
+   </recepta>
+   <recepta dificultat="8">
+       <nom>beixamel</nom>
+       <passos>
+           <pas>remenar tot</pas>
+           <pas>posar a la paella</pas>
+       </passos>
+   </recepta>
+</receptes>

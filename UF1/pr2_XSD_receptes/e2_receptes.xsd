@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!--
+    Narcís Carol
+    Oriol Canellas
+    Aleix Dediego
+    16/12/2022
+    ASIXc1B M04 UF1 A2 E3
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <!-- Define el elemento principal y su complejidad -->
+    <xs:element name="receptes">
+        <xs:complexType>
+            <xs:sequence>
+                
+                <!-- Define el elemento "recepta" y su complejidad -->
+                <xs:element name="recepta" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            
+                            <!-- Define el elemento "autor" y su complejidad -->
+                            <xs:element name="autor" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nom" type="xs:string"/>
+                                        <xs:element name="dni" type="xs:integer"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <!-- Define el elemento "nom" y su tipo de dato -->
+                            <xs:element name="nom" type="xs:string"/>
+                            
+                            <!-- Define el elemento "ingredients" y su complejidad -->
+                            <xs:element name="ingredients">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        
+                                        <!-- Define el elemento "ingredient" y su complejidad -->
+                                        <xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    
+                                                    <!-- Define el elemento "quantitat" y su complejidad -->
+                                                    <xs:element name="quantitat">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="valor" type="xs:decimal"/>
+                                                                <xs:element name="mesura" type="xs:string"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    
+                                                    <!-- Define el elemento "nom" y su tipo de dato -->
+                                                    <xs:element name="nom" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            
+                            <!-- Define el elemento "passos" y su complejidad -->
+                            <xs:element name="passos" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        
+                                        <!-- Define el elemento "pas" y su tipo de dato -->
+                                        <xs:element name="pas" type="xs:string" minOccurs="2" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        
+                        <!-- Define los atributos de la "recepta" -->
+                        <xs:attribute name="dificultat" type="xs:nonNegativeInteger" use="required" />
+                        <xs:attribute name="categoria" type="xs:string" use="optional"/>
+                    </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
